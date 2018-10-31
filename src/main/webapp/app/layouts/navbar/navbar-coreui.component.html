@@ -1,0 +1,54 @@
+<div *ngIf="isAuthenticated()">
+    <app-header [fixed]="true" [navbarBrandFull]="{src: '/content/images/logo-scjn.png', height: 25, alt: 'SCJN'}"
+        [navbarBrandMinimized]="{src: '/content/images/logo-scjn.png', width: 30, height: 22, alt: 'SCJN'}"
+        [sidebarToggler]="'lg'" [asideMenuToggler]="false" [mobileAsideMenuToggler]="false" [ngSwitch]="isAuthenticated()">
+        <ul class="nav navbar-nav d-md-down-none" *ngSwitchCase="true">
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#">Dashboard</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li ngbDropdown class="nav-item dropdown pointer px-3" *ngIf="languages && languages.length > 1">
+                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="languagesnavBarDropdown">
+                    <span>
+                        <fa-icon [icon]="'flag'"></fa-icon>
+                        <span jhiTranslate="global.menu.language">Language</span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li *ngFor="let language of languages">
+                        <a class="dropdown-item" [jhiActiveMenu]="language" href="javascript:void(0);" (click)="changeLanguage(language);collapseNavbar();">{{language
+                            | findLanguageFromKey}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li ngbDropdown class="nav-item dropdown pointer px-3" placement="bottom-right" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
+                <span *ngIf="!getImageUrl()">
+                    <fa-icon [icon]="'user'"></fa-icon>
+                    <span jhiTranslate="global.menu.account.main">
+                    Account
+                    </span>
+                </span>
+                <span *ngIf="getImageUrl()">
+                    <img [src]="getImageUrl()" class="profile-image img-circle" alt="Avatar">
+                </span>
+                </a>
+                <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li *ngSwitchCase="true">
+                        <a class="dropdown-item" (click)="logout()" id="logout">
+                            <fa-icon [icon]="'sign-out-alt'" [fixedWidth]="true"></fa-icon>
+                            <span jhiTranslate="global.menu.account.logout">Sign out</span>
+                        </a>
+                    </li>
+                    <li *ngSwitchCase="false">
+                        <a class="dropdown-item" (click)="login()" id="login">
+                            <fa-icon [icon]="'sign-in-alt'" [fixedWidth]="true"></fa-icon>
+                            <span jhiTranslate="global.menu.account.login">Sign in</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </app-header>
+</div>

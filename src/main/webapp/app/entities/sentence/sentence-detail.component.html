@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sentence">
+            <h2><span jhiTranslate="sentencesgwApp.sentence.detail.title">Sentence</span> {{sentence.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="sentencesgwApp.sentence.title">Title</span></dt>
+                <dd>
+                    <span>{{sentence.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.group">Group</span></dt>
+                <dd>
+                    <span>{{sentence.group}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.country">Country</span></dt>
+                <dd>
+                    <span>{{sentence.country}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.status">Status</span></dt>
+                <dd>
+                    <span>{{sentence.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.emisor">Emisor</span></dt>
+                <dd>
+                    <span>{{sentence.emisor}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.facts">Facts</span></dt>
+                <dd>
+                    <span>{{sentence.facts}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.argumentsSummary">Arguments Summary</span></dt>
+                <dd>
+                    <span>{{sentence.argumentsSummary}}</span>
+                </dd>
+                <dt><span jhiTranslate="sentencesgwApp.sentence.type">Type</span></dt>
+                <dd>
+                    <span>{{sentence.type}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sentence', sentence.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

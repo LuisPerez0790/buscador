@@ -1,5 +1,8 @@
 @import 'bootstrap-variables';
 
+$scjn: #0075a1;
+$scjn-hover: #23527c;
+
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
@@ -13,13 +16,13 @@ h4 {
 }
 
 a {
-    color: #533f03;
-    font-weight: bold;
+    color: $scjn;
+    font-weight: normal;
 }
 
 a:hover {
-    color: #533f03;
-    font-weight: bold;
+    color: $scjn-hover;
+    font-weight: normal;
     /* make sure browsers use the pointer cursor for anchors, even with no href */
     cursor: pointer;
 }
@@ -224,3 +227,277 @@ ui bootstrap tweaks
 }
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+/* ===================================================================
+General
+=================================================================== */
+body {
+    font-size: 14px !important;
+}
+strong {
+    font-weight: bold;
+}
+.title {
+    color: $scjn;
+    font-weight: bold;
+}
+.file {
+    display: inline-block;
+}
+.custom-file-label::after {
+    content: 'Buscar';
+}
+.ocultar {
+    text-indent: -9999em;
+    font-size: 1px;
+}
+a:focus,
+a:active,
+a:hover {
+    outline-offset: 2px;
+    outline: 2px solid $scjn;
+    text-decoration: none !important;
+}
+h1.page-header {
+    font-weight: 700;
+    font-size: 28px;
+    padding-top: 15px;
+    border-bottom: 2px solid #0075a1;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.card-block.form-inline,
+.card-block.form-group {
+    padding: 10px;
+}
+ul.uploading-files {
+    padding-left: 0;
+
+    li {
+        margin: 5px;
+    }
+}
+#view-filters {
+    .form-item {
+        label {
+            font-weight: bold;
+        }
+        select {
+            height: 2.3em;
+            border-color: #000000;
+            border-radius: 0;
+            font-size: 14px;
+        }
+        button {
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn:disabled {
+            cursor: not-allowed;
+        }
+        .form-check {
+            label {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #view-filters {
+        form {
+            float: none;
+        }
+        .form-item {
+            width: 100%;
+        }
+    }
+}
+
+#pagination {
+    margin: 20px 0;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+}
+
+/* The switch - the box around the slider */
+/* .switch {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 34px;
+} */
+
+/* Hide default HTML checkbox */
+/* .switch input {
+    display: none;
+} */
+
+/* The slider */
+/* .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+} */
+
+/* .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+} */
+
+/* input:checked + .slider {
+    background-color: $scjn;
+} */
+
+/* input:focus + .slider {
+    box-shadow: 0 0 1px $scjn;
+} */
+
+/* input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+} */
+
+/* Rounded sliders */
+/* .slider.round {
+    border-radius: 34px;
+} */
+
+/* .slider.round:before {
+    border-radius: 50%;
+} */
+/* ===================================================================
+Ng-Select
+=================================================================== */
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+    background-color: $scjn;
+}
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label {
+    font-weight: bold;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
+    color: $scjn;
+}
+
+/* ===================================================================
+Admin Navbar
+=================================================================== */
+#navbar-logo {
+    font-size: 35px;
+    display: table-cell;
+}
+#navbar-title {
+    display: table-cell;
+}
+
+#admin-navbar {
+    height: 0;
+    border-bottom: none;
+}
+/* ===================================================================
+Icons
+=================================================================== */
+.icon-pdf {
+    color: #ff0000;
+}
+.icon-excel {
+    color: #207347;
+}
+.icon-doc-word {
+    color: #3b5998;
+}
+.icon-enlaces-ligas {
+    color: $scjn;
+}
+.icon i {
+    font-size: 40px;
+}
+.media-left {
+    display: table-cell;
+    padding-right: 10px;
+}
+.media-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* ===================================================================
+Breadcrumb
+=================================================================== */
+.breadcrumb {
+    background-color: transparent !important;
+    clear: both;
+    float: right;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: 0;
+    border-bottom: none !important;
+
+    .breadcrumb-item.active {
+        color: #000000;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        padding: 0 5px;
+        color: #000000;
+        content: '\2022';
+    }
+}
+
+/* ===================================================================
+Videoteca de Sesiones
+=================================================================== */
+#sessions-video-library {
+    table {
+        tbody {
+            td.image {
+                /* background: url("../../content/images/scjn-pleno.jpg") no-repeat center top; */
+                background-size: 100%;
+                height: 95px;
+                width: 150px;
+                display: block;
+            }
+            .document-link {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+#sessions-video-library-detail {
+    .document-link {
+        margin-bottom: 15px;
+    }
+}
+.dropdown-item {
+    white-space: normal !important;
+}
+mark, .mark {
+    background-color: #fbf501e6 !important;
+    color: inherit;
+    padding: 0px;
+}

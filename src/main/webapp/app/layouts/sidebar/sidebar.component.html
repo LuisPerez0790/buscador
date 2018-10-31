@@ -1,0 +1,6 @@
+<div *ngIf="isAuthenticated()">
+    <app-sidebar [fixed]="true" [display]="isDisplay" *ngIf="navItems.length">
+        <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+        <app-sidebar-minimizer></app-sidebar-minimizer>
+    </app-sidebar>
+</div>

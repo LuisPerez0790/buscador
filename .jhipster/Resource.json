@@ -1,0 +1,35 @@
+{
+    "name": "Resource",
+    "fields": [
+        {
+            "fieldName": "fileId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "path",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "sentence",
+            "otherEntityName": "sentence",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181030001800",
+    "entityTableName": "resource",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

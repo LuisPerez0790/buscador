@@ -1,0 +1,31 @@
+
+{
+    "sentencesgwApp": {
+        "sentence" : {
+            "home": {
+                "title": "Sentences",
+                "createLabel": "Crear nuevo Sentence",
+                "createOrEditLabel": "Crear o editar Sentence",
+                "search": "Search for Sentence"
+            },
+            "created": "Un nuevo Sentence ha sido creado con el identificador {{ param }}",
+            "updated": "Un Sentence ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Sentence ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Sentence {{ id }}?"
+            },
+            "detail": {
+                "title": "Sentence"
+            },
+            "title": "Title",
+            "group": "Group",
+            "country": "Country",
+            "status": "Status",
+            "emisor": "Emisor",
+            "facts": "Facts",
+            "argumentsSummary": "Arguments Summary",
+            "type": "Type",
+            "resource": "Resource"
+        }
+    }
+}

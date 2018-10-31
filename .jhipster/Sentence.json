@@ -1,0 +1,55 @@
+{
+    "name": "Sentence",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "group",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "emisor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "facts",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "argumentsSummary",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "resource",
+            "otherEntityName": "resource",
+            "otherEntityRelationshipName": "sentence"
+        }
+    ],
+    "changelogDate": "20181030001759",
+    "entityTableName": "sentence",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

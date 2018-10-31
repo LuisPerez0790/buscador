@@ -1,0 +1,889 @@
+@import "variables";
+
+@font-face {
+    font-family: 'iconos-vdos';
+    src:  url('#{$icomoon-font-path}/iconos-vdos.eot?vymwdj');
+    src:  url('#{$icomoon-font-path}/iconos-vdos.eot?vymwdj#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/iconos-vdos.ttf?vymwdj') format('truetype'),
+    url('#{$icomoon-font-path}/iconos-vdos.woff?vymwdj') format('woff'),
+    url('#{$icomoon-font-path}/iconos-vdos.svg?vymwdj#iconos-vdos') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icons-vdos {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'iconos-vdos' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-historia {
+    &:before {
+        content: $icon-historia;
+    }
+}
+.icon-ccj {
+    &:before {
+        content: $icon-ccj;
+    }
+}
+.icon-ccj-archivo {
+    &:before {
+        content: $icon-ccj-archivo;
+    }
+}
+.icon-ccj-comp-leyes {
+    &:before {
+        content: $icon-ccj-comp-leyes;
+    }
+}
+.icon-ccj-datos {
+    &:before {
+        content: $icon-ccj-datos;
+    }
+}
+.icon-ccj-direccion {
+    &:before {
+        content: $icon-ccj-direccion;
+    }
+}
+.icon-ccj-directorio {
+    &:before {
+        content: $icon-ccj-directorio;
+    }
+}
+.icon-ccj-eventos-cal {
+    &:before {
+        content: $icon-ccj-eventos-cal;
+    }
+}
+.icon-ccj-info-eventos {
+    &:before {
+        content: $icon-ccj-info-eventos;
+    }
+}
+.icon-ccj-martes-dh {
+    &:before {
+        content: $icon-ccj-martes-dh;
+    }
+}
+.icon-ccj-rergesar {
+    &:before {
+        content: $icon-ccj-rergesar;
+    }
+}
+.icon-ccj-resena-historica {
+    &:before {
+        content: $icon-ccj-resena-historica;
+    }
+}
+.icon-ccj-scjn-logovertical {
+    &:before {
+        content: $icon-ccj-scjn-logovertical;
+    }
+}
+.icon-ccj-telefono {
+    &:before {
+        content: $icon-ccj-telefono;
+    }
+}
+.icon-ccj-videoteca-ccj {
+    &:before {
+        content: $icon-ccj-videoteca-ccj;
+    }
+}
+.icon-ccj-videoteca-cronicas {
+    &:before {
+        content: $icon-ccj-videoteca-cronicas;
+    }
+}
+.icon-scjn-aguila {
+    &:before {
+        content: $icon-scjn-aguila;
+    }
+}
+.icon-ccjlogo {
+    &:before {
+        content: $icon-ccjlogo;
+    }
+}
+.icon-mision {
+    &:before {
+        content: $icon-mision;
+    }
+}
+.icon-vision {
+    &:before {
+        content: $icon-vision;
+    }
+}
+.icon-alex {
+    &:before {
+        content: $icon-alex;
+    }
+}
+.icon-sipot-texto {
+    &:before {
+        content: $icon-sipot-texto;
+    }
+}
+.icon-subir {
+    &:before {
+        content: $icon-subir;
+    }
+}
+.icon-youtube {
+    &:before {
+        content: $icon-youtube;
+    }
+}
+.icon-mas {
+    &:before {
+        content: $icon-mas;
+    }
+}
+.icon-editar {
+    &:before {
+        content: $icon-editar;
+    }
+}
+.icon-actividad-institucional {
+    &:before {
+        content: $icon-actividad-institucional;
+    }
+}
+.icon-biblioteca-digital {
+    &:before {
+        content: $icon-biblioteca-digital;
+    }
+}
+.icon-casas-cultura-1 {
+    &:before {
+        content: $icon-casas-cultura-1;
+    }
+}
+.icon-casas-cultura-2 {
+    &:before {
+        content: $icon-casas-cultura-2;
+    }
+}
+.icon-constitucion-mexico {
+    &:before {
+        content: $icon-constitucion-mexico;
+    }
+}
+.icon-cronicas-pleno {
+    &:before {
+        content: $icon-cronicas-pleno;
+    }
+}
+.icon-creacion-mo {
+    &:before {
+        content: $icon-creacion-mo;
+    }
+}
+.icon-logro-mo {
+    &:before {
+        content: $icon-logro-mo;
+    }
+}
+.icon-mariano {
+    &:before {
+        content: $icon-mariano;
+    }
+}
+.icon-ceremonias-solemnes {
+    &:before {
+        content: $icon-ceremonias-solemnes;
+    }
+}
+.icon-magis-mundo {
+    &:before {
+        content: $icon-magis-mundo;
+    }
+}
+.icon-nuevo-elemento {
+    &:before {
+        content: $icon-nuevo-elemento;
+    }
+}
+.icon-busqueda-ventana {
+    &:before {
+        content: $icon-busqueda-ventana;
+    }
+}
+.icon-fideicomiso {
+    &:before {
+        content: $icon-fideicomiso;
+    }
+}
+.icon-info-clas {
+    &:before {
+        content: $icon-info-clas;
+    }
+}
+.icon-personas-dh {
+    &:before {
+        content: $icon-personas-dh;
+    }
+}
+.icon-radio {
+    &:before {
+        content: $icon-radio;
+    }
+}
+.icon-grafica-pay {
+    &:before {
+        content: $icon-grafica-pay;
+    }
+}
+.icon-ejecutorias {
+    &:before {
+        content: $icon-ejecutorias;
+    }
+}
+.icon-expediente {
+    &:before {
+        content: $icon-expediente;
+    }
+}
+.icon-scjn-sitio-web {
+    &:before {
+        content: $icon-scjn-sitio-web;
+    }
+}
+.icon-tesis {
+    &:before {
+        content: $icon-tesis;
+    }
+}
+.icon-votos {
+    &:before {
+        content: $icon-votos;
+    }
+}
+.icon-aimj-igualdad {
+    &:before {
+        content: $icon-aimj-igualdad;
+    }
+}
+.icon-belem-do-para {
+    &:before {
+        content: $icon-belem-do-para;
+    }
+}
+.icon-boletin-suscripcion {
+    &:before {
+        content: $icon-boletin-suscripcion;
+    }
+}
+.icon-cedaw {
+    &:before {
+        content: $icon-cedaw;
+    }
+}
+.icon-comite-igualdad {
+    &:before {
+        content: $icon-comite-igualdad;
+    }
+}
+.icon-cumbre-jud-ibero {
+    &:before {
+        content: $icon-cumbre-jud-ibero;
+    }
+}
+.icon-eijpg {
+    &:before {
+        content: $icon-eijpg;
+    }
+}
+.icon-glosario {
+    &:before {
+        content: $icon-glosario;
+    }
+}
+.icon-marco-juridico {
+    &:before {
+        content: $icon-marco-juridico;
+    }
+}
+.icon-noticias {
+    &:before {
+        content: $icon-noticias;
+    }
+}
+.icon-pacto-genero {
+    &:before {
+        content: $icon-pacto-genero;
+    }
+}
+.icon-programa-tv {
+    &:before {
+        content: $icon-programa-tv;
+    }
+}
+.icon-revista-igualdad {
+    &:before {
+        content: $icon-revista-igualdad;
+    }
+}
+.icon-sentencia-igualdad {
+    &:before {
+        content: $icon-sentencia-igualdad;
+    }
+}
+.icon-internet {
+    &:before {
+        content: $icon-internet;
+    }
+}
+.icon-bandera {
+    &:before {
+        content: $icon-bandera;
+    }
+}
+.icon-cortos-animados {
+    &:before {
+        content: $icon-cortos-animados;
+    }
+}
+.icon-cronicas-resenias {
+    &:before {
+        content: $icon-cronicas-resenias;
+    }
+}
+.icon-derechos-personas {
+    &:before {
+        content: $icon-derechos-personas;
+    }
+}
+.icon-gaceta-compromiso {
+    &:before {
+        content: $icon-gaceta-compromiso;
+    }
+}
+.icon-informe-labores {
+    &:before {
+        content: $icon-informe-labores;
+    }
+}
+.icon-institucional {
+    &:before {
+        content: $icon-institucional;
+    }
+}
+.icon-newsletter {
+    &:before {
+        content: $icon-newsletter;
+    }
+}
+.icon-servidores-publicos {
+    &:before {
+        content: $icon-servidores-publicos;
+    }
+}
+.icon-videoteca-juridica {
+    &:before {
+        content: $icon-videoteca-juridica;
+    }
+}
+.icon-vstenograficas {
+    &:before {
+        content: $icon-vstenograficas;
+    }
+}
+.icon-signo-hombre-mujer {
+    &:before {
+        content: $icon-signo-hombre-mujer;
+    }
+}
+.icon-cuadro-dh {
+    &:before {
+        content: $icon-cuadro-dh;
+    }
+}
+.icon-plataforma-nac-transparencia {
+    &:before {
+        content: $icon-plataforma-nac-transparencia;
+    }
+}
+.icon-audifono {
+    &:before {
+        content: $icon-audifono;
+    }
+}
+.icon-descargar {
+    &:before {
+        content: $icon-descargar;
+    }
+}
+.icon-excel {
+    &:before {
+        content: $icon-excel;
+    }
+}
+.icon-zip {
+    &:before {
+        content: $icon-zip;
+    }
+}
+.icon-dhumanos {
+    &:before {
+        content: $icon-dhumanos;
+    }
+}
+.icon-adquisiciones {
+    &:before {
+        content: $icon-adquisiciones;
+    }
+}
+.icon-adquisiciones2 {
+    &:before {
+        content: $icon-adquisiciones2;
+    }
+}
+.icon-adquisiciones3 {
+    &:before {
+        content: $icon-adquisiciones3;
+    }
+}
+.icon-agenda {
+    &:before {
+        content: $icon-agenda;
+    }
+}
+.icon-asistencia-cursos {
+    &:before {
+        content: $icon-asistencia-cursos;
+    }
+}
+.icon-audiolibro {
+    &:before {
+        content: $icon-audiolibro;
+    }
+}
+.icon-base-datos {
+    &:before {
+        content: $icon-base-datos;
+    }
+}
+.icon-biblioteca-digital2 {
+    &:before {
+        content: $icon-biblioteca-digital2;
+    }
+}
+.icon-bjdh-siglas {
+    &:before {
+        content: $icon-bjdh-siglas;
+    }
+}
+.icon-boletin {
+    &:before {
+        content: $icon-boletin;
+    }
+}
+.icon-boton-subir {
+    &:before {
+        content: $icon-boton-subir;
+    }
+}
+.icon-cargos-honorarios {
+    &:before {
+        content: $icon-cargos-honorarios;
+    }
+}
+.icon-catalogo-cambridge {
+    &:before {
+        content: $icon-catalogo-cambridge;
+    }
+}
+.icon-catalogo-enlines {
+    &:before {
+        content: $icon-catalogo-enlines;
+    }
+}
+.icon-catalogo {
+    &:before {
+        content: $icon-catalogo;
+    }
+}
+.icon-coleccion-infantil {
+    &:before {
+        content: $icon-coleccion-infantil;
+    }
+}
+.icon-comites {
+    &:before {
+        content: $icon-comites;
+    }
+}
+.icon-comunicados {
+    &:before {
+        content: $icon-comunicados;
+    }
+}
+.icon-contenido {
+    &:before {
+        content: $icon-contenido;
+    }
+}
+.icon-cronicas {
+    &:before {
+        content: $icon-cronicas;
+    }
+}
+.icon-cursos-impartidos {
+    &:before {
+        content: $icon-cursos-impartidos;
+    }
+}
+.icon-cursos {
+    &:before {
+        content: $icon-cursos;
+    }
+}
+.icon-dias-agenda {
+    &:before {
+        content: $icon-dias-agenda;
+    }
+}
+.icon-directorio-persona {
+    &:before {
+        content: $icon-directorio-persona;
+    }
+}
+.icon-discos {
+    &:before {
+        content: $icon-discos;
+    }
+}
+.icon-discursos-mp {
+    &:before {
+        content: $icon-discursos-mp;
+    }
+}
+.icon-doc-word {
+    &:before {
+        content: $icon-doc-word;
+    }
+}
+.icon-duda {
+    &:before {
+        content: $icon-duda;
+    }
+}
+.icon-enlaces-ligas {
+    &:before {
+        content: $icon-enlaces-ligas;
+    }
+}
+.icon-estadisticas {
+    &:before {
+        content: $icon-estadisticas;
+    }
+}
+.icon-estudios {
+    &:before {
+        content: $icon-estudios;
+    }
+}
+.icon-experiencia-academica {
+    &:before {
+        content: $icon-experiencia-academica;
+    }
+}
+.icon-experiencia-profesional {
+    &:before {
+        content: $icon-experiencia-profesional;
+    }
+}
+.icon-gasto-publico {
+    &:before {
+        content: $icon-gasto-publico;
+    }
+}
+.icon-guia {
+    &:before {
+        content: $icon-guia;
+    }
+}
+.icon-inicio {
+    &:before {
+        content: $icon-inicio;
+    }
+}
+.icon-libro-electonico {
+    &:before {
+        content: $icon-libro-electonico;
+    }
+}
+.icon-libro {
+    &:before {
+        content: $icon-libro;
+    }
+}
+.icon-ministra {
+    &:before {
+        content: $icon-ministra;
+    }
+}
+.icon-mundo {
+    &:before {
+        content: $icon-mundo;
+    }
+}
+.icon-nota-historica {
+    &:before {
+        content: $icon-nota-historica;
+    }
+}
+.icon-notificacion-electronica {
+    &:before {
+        content: $icon-notificacion-electronica;
+    }
+}
+.icon-novedades {
+    &:before {
+        content: $icon-novedades;
+    }
+}
+.icon-pdf {
+    &:before {
+        content: $icon-pdf;
+    }
+}
+.icon-preguntas {
+    &:before {
+        content: $icon-preguntas;
+    }
+}
+.icon-publicaciones {
+    &:before {
+        content: $icon-publicaciones;
+    }
+}
+.icon-recomendaciones-internacionales {
+    &:before {
+        content: $icon-recomendaciones-internacionales;
+    }
+}
+.icon-recomendaciones {
+    &:before {
+        content: $icon-recomendaciones;
+    }
+}
+.icon-reconocimientos-nombre {
+    &:before {
+        content: $icon-reconocimientos-nombre;
+    }
+}
+.icon-reconocimientos {
+    &:before {
+        content: $icon-reconocimientos;
+    }
+}
+.icon-red-bibliotecas {
+    &:before {
+        content: $icon-red-bibliotecas;
+    }
+}
+.icon-resena {
+    &:before {
+        content: $icon-resena;
+    }
+}
+.icon-servicios-colecciones {
+    &:before {
+        content: $icon-servicios-colecciones;
+    }
+}
+.icon-sinopsis-pleno {
+    &:before {
+        content: $icon-sinopsis-pleno;
+    }
+}
+.icon-sinopsis-salas {
+    &:before {
+        content: $icon-sinopsis-salas;
+    }
+}
+.icon-sitio-web {
+    &:before {
+        content: $icon-sitio-web;
+    }
+}
+.icon-sjf-siglas {
+    &:before {
+        content: $icon-sjf-siglas;
+    }
+}
+.icon-sjf {
+    &:before {
+        content: $icon-sjf;
+    }
+}
+.icon-soporte-discos {
+    &:before {
+        content: $icon-soporte-discos;
+    }
+}
+.icon-tarifa-documento {
+    &:before {
+        content: $icon-tarifa-documento;
+    }
+}
+.icon-telefono {
+    &:before {
+        content: $icon-telefono;
+    }
+}
+.icon-triangulo-area-encargada {
+    &:before {
+        content: $icon-triangulo-area-encargada;
+    }
+}
+.icon-ubicacion-directorio {
+    &:before {
+        content: $icon-ubicacion-directorio;
+    }
+}
+.icon-unidad {
+    &:before {
+        content: $icon-unidad;
+    }
+}
+.icon-videoconferencias {
+    &:before {
+        content: $icon-videoconferencias;
+    }
+}
+.icon-videos {
+    &:before {
+        content: $icon-videos;
+    }
+}
+.icon-audio {
+    &:before {
+        content: $icon-audio;
+    }
+}
+.icon-informacion {
+    &:before {
+        content: $icon-informacion;
+    }
+}
+.icon-mazo {
+    &:before {
+        content: $icon-mazo;
+    }
+}
+.icon-redessociales {
+    &:before {
+        content: $icon-redessociales;
+    }
+}
+.icon-phone {
+    &:before {
+        content: $icon-phone;
+    }
+}
+.icon-ctrl {
+    &:before {
+        content: $icon-ctrl;
+    }
+}
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+    }
+}
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+    }
+}
+.icon-equidadgenero {
+    &:before {
+        content: $icon-equidadgenero;
+    }
+}
+.icon-canaljudicial {
+    &:before {
+        content: $icon-canaljudicial;
+    }
+}
+.icon-eventos {
+    &:before {
+        content: $icon-eventos;
+    }
+}
+.icon-avisos {
+    &:before {
+        content: $icon-avisos;
+    }
+}
+.icon-ubicacion {
+    &:before {
+        content: $icon-ubicacion;
+    }
+}
+.icon-vinculos {
+    &:before {
+        content: $icon-vinculos;
+    }
+}
+.icon-estructura {
+    &:before {
+        content: $icon-estructura;
+    }
+}
+.icon-prensa {
+    &:before {
+        content: $icon-prensa;
+    }
+}
+.icon-sisconsulta {
+    &:before {
+        content: $icon-sisconsulta;
+    }
+}
+.icon-transparencia {
+    &:before {
+        content: $icon-transparencia;
+    }
+}
+.icon-podcast {
+    &:before {
+        content: $icon-podcast;
+    }
+}
+.icon-scjn-logo {
+    &:before {
+        content: $icon-scjn-logo;
+    }
+}
+.icon-pleno {
+    &:before {
+        content: $icon-pleno;
+    }
+}
+.icon-correo {
+    &:before {
+        content: $icon-correo;
+    }
+}
+.icon-infomex {
+    &:before {
+        content: $icon-infomex;
+    }
+}
+

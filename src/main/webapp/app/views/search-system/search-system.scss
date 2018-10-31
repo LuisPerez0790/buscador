@@ -1,0 +1,138 @@
+/* ==========================================================================
+title style
+========================================================================== */
+.title_style{
+    font-weight: 700;
+    font-size: 25px;
+    color: #0075a1;    
+}
+
+.title_center{
+    padding: 20px 0px 20px 60px;
+}
+
+
+/* ==========================================================================
+Menu & tabs
+========================================================================== */
+
+.menu{
+   background-color: #E9E9E9;
+   min-height: 600px;
+}
+
+.gray-background{
+    background-color: #A7A5A6;
+    color: white !important;
+}
+
+
+.active-tab{
+    background-color: #036695;
+}
+
+.active-filter{
+    color: #036695;
+    font-weight: 600;
+
+}
+
+.filter-style{
+    padding: 20px 100px;
+    color: #036695;
+}
+
+.sub-item{
+    color: #636162;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.active-sub-item{
+    background-color: #E9E9E9;
+}
+
+.no-content{
+    display: none;
+}
+
+.result-content{
+    padding: 30px 50px 0px 50px;
+   
+}
+
+.left-color-border{
+    border-left: 2px;
+    border-left-color: #036695;
+    border-left-style: solid;
+}
+
+.bottom-color-border{
+    border-bottom: 2px;
+    border-bottom-color: #A7A5A6;
+    border-bottom-style: solid;
+}
+
+.padding-right-1{
+    padding-right:1px;
+}
+
+.padding-top-12{
+    padding-top: 12.5px;
+}
+/* ==========================================================================
+No content
+========================================================================== */
+
+.search_img{
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    background: url('../../../content/images/search.png') no-repeat center bottom;
+}
+
+/* ==========================================================================
+SCJN icon
+========================================================================== */
+.icon-scjn-logo:before {
+    content: "\e909";
+}
+#logo-oficial span{
+    font-size: 60px;
+    color: #0075a1;
+}
+#logo-oficial a {
+    display: inline-block;
+}
+    
+#logo-oficial a:focus span {
+    outline: 3px solid #0075a1;
+}
+#logo-oficial a:focus {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+PDF icon
+========================================================================== */
+.icon-pdf:before {
+    content: "\e93f";
+}
+
+#pdf{
+    font-size: 40px;
+    color: #ff0000;
+}
+
+.wide{
+    height: 50px;
+    margin-bottom: 1px;
+}
+
+.center{
+    padding-top: 13px;
+}
+
+.pointer {
+    cursor: pointer;
+}

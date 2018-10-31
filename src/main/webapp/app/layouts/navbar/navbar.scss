@@ -1,14 +1,15 @@
+$scjn: #0075a1;
+$scjn-hover: #23527c;
 /* ==========================================================================
 Navbar
 ========================================================================== */
-
 .navbar-version {
     font-size: 10px;
     color: #ccc;
 }
 
 .jh-navbar {
-    background-color: #353d47;
+    background-color: $scjn;
     padding: 0.2em 1em;
     .profile-image {
         margin: -10px 0px;
@@ -19,7 +20,7 @@ Navbar
     .dropdown-item.active,
     .dropdown-item.active:focus,
     .dropdown-item.active:hover {
-        background-color: #353d47;
+        background-color: $scjn;
     }
     .dropdown-toggle::after {
         margin-left: 0.15em;
@@ -34,7 +35,7 @@ Navbar
         font-weight: 400;
     }
     .jh-navbar-toggler {
-        color: #ccc;
+        color: #ffffff;
         font-size: 1.5em;
         padding: 10px;
         &:hover {
@@ -73,6 +74,10 @@ Logo styles
             vertical-align: middle;
             background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
             background-size: contain;
+        }
+        i {
+            font-size: 35px;
+            vertical-align: middle;
         }
     }
 }

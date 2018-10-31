@@ -1,11 +1,11 @@
 <jhi-page-ribbon></jhi-page-ribbon>
-<div>
+<div class="app-header primary-color" id="admin-navbar">
     <router-outlet name="navbar"></router-outlet>
 </div>
-<div class="container-fluid">
-    <div class="card jh-card">
+<div class="app-body">
+    <router-outlet name="sidebar"></router-outlet>
+    <main class="main">
         <router-outlet></router-outlet>
-        <router-outlet name="popup"></router-outlet>
-    </div>
-    <jhi-footer></jhi-footer>
+    </main>
 </div>
+<router-outlet name="popup"></router-outlet>

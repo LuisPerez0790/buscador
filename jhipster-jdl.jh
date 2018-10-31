@@ -1,0 +1,30 @@
+entity Sentence {
+	title String,
+    group String,
+    country String,
+	status String,
+	emisor String,
+	facts String,
+	argumentsSummary String,
+    type Integer
+}
+
+entity Resource{
+	fileId Long,
+    title String,
+    path String
+}
+
+relationship OneToMany{
+	Sentence{resource} to Resource{sentence}
+}
+
+
+// Set pagination options
+paginate * with pagination
+search * with elasticsearch
+dto * with mapstruct
+filter *
+// Set service options to all except few
+service all with serviceClass
+

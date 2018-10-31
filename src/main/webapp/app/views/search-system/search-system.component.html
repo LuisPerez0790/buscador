@@ -1,0 +1,166 @@
+<div>
+    <div class="row">
+        <div class="col-10 title_center">
+            <h2 class="title_style"><strong>PLATAFORMA DE APOYO SOBRE LOS DERECHOS DE PERSONAS EN SITUACIÓN DE VULNERABILIDAD</strong></h2>
+        </div>
+        <div class="col-2" id="logo-oficial">
+            
+            <a href="https://www.scjn.gob.mx" rel="home" 
+                aria-label="Ir a la página principal de la Suprema Corte de Justicia de la Nación">
+
+                <span class="icons-vdos icon-scjn-logo"></span>                   
+            </a>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-4 padding-right-1">
+            <div>
+                <div class="gray-background text-center wide">
+                    <h5 class="center">CRITERIOS DE BÚSQUEDA</h5>
+                </div>
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a [ngClass]="selectedTab == 1 ? 'active-tab': ''" 
+                            (click)="setTab(1)" 
+                            class="nav-link gray-background mr-1">Resoluciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a a [ngClass]="selectedTab == 2 ? 'active-tab': ''" 
+                            (click)="setTab(2)" 
+                            class="nav-link gray-background">Buenas practicas</a>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+        <div class="col-8 gray-background">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3 pt-2">
+                    
+                    <input type="text" class="form-control" 
+                            [(ngModel)]="textQuery" 
+                            id="currentSearch" 
+                            name="currentSearch" >
+
+                    <button class="input-group-append btn btn-info" (click)="search(textQuery)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class = "row">
+        <div *ngIf="selectedTab == 1" class="col-4 pr-0">
+            <div class="menu">
+                <ul class="filter-style">
+                    <li class="filter">
+                        <a>Pais</a>
+                        
+                        <ul *ngFor="let country of filters.country; let i of index" class="sub-item">
+                            <li class="pointer" 
+                                [class.active-filter]="country === selectedCountry" 
+                                (click)="setCountry(country)">{{country}}</li>
+                        </ul>
+
+                    </li>
+                    <li class="filter">
+                        <a>Grupos protegidos</a>
+                        
+                        <ul *ngFor="let group of filters.group" class="sub-item">
+                            <li class="pointer" 
+                                [class.active-filter]="group === selectedGroup" 
+                                (click)="setGroup(group)">{{group}}</li>
+                        </ul>
+
+                    </li>
+                </ul>   
+            </div>     
+        </div>
+        <div *ngIf="selectedTab == 2" class="col-4 pr-0">
+            <div class="menu">
+                <ul class="filter-style">
+                    <li class="filter">
+                        <a>Pais</a>
+                        <ul class="sub-item">
+                            <li (click)="setCountry(country)">Under Construction</li>
+                        </ul>
+                    </li>
+                    <li class="filter">
+                        <a>Grupos protegidos</a>
+                        <ul class="sub-item">
+                            <li (click)="setGroup(group)">Under Construction</li>
+                        </ul>
+                    </li>
+                </ul>   
+            </div>     
+        </div>
+       
+
+        <div class="col-8">
+            <div *ngIf="!sentences">
+                <div class="row search_img"></div>
+                <div class="row text-center">
+                    <p class="w-100">Para realizar una consulta ingresa algún término en la barra de búsqueda.<br/>
+                        También puedes empezar seleccionando un “Criterio de Búsqueda” en la barra lateral izquierda.
+                    </p>
+                </div>
+            </div>
+            <div class="result-content">
+
+                <div [ngClass]="isCollapsed[i] ? 'active-sub-item': ''" 
+                        *ngFor="let sentence of sentences; let i = index" 
+                        class="padding-top-12 pointer" 
+                        (click)="isCollapsed[i] = !isCollapsed[i]">
+                   
+                    <div class="pl-2 bottom-color-border">
+                        <div class="row mx-0 pb-3">
+                            <span [innerHTML]="sentence.title"></span>
+                        </div>
+                        <div class="row mx-0 pb-3 sub-item">
+                            <div class="col-2 left-color-border">
+                                <span [innerHTML]="sentence.country "></span>
+                            </div>
+                            <div class="col-2 left-color-border">
+                                <span [innerHTML]="sentence.status "></span>
+                            </div>
+                            <div class="col-7 left-color-border">
+                                <span [innerHTML]="sentence.group "></span>
+                            </div>
+                        </div>
+                        <div [ngbCollapse]="!isCollapsed[i]" class="detail-result pb-4">
+                            <div class="row mx-0 left-color-border">
+                                <p class="pl-2"><span class="sub-item">Órgano emisor: </span><span [innerHTML]="sentence.emisor"></span></p>
+                            
+                            </div>
+                            <br/>
+                            <div class="row mx-0 left-color-border">
+                                <p class="pl-2"><span class="sub-item">Hechos: </span><span [innerHTML]="sentence.facts "></span></p>
+                            </div>
+                            <br/>
+                            <div class="row mx-0 left-color-border">
+                                <p class="pl-2"><span class="sub-item">Resumen de los argumentos: </span><span [innerHTML]="sentence.argumentsSummary "></span></p>
+                            </div>
+                            <br/>
+           
+                            <div class="row mx-0 left-color-border"> 
+                                <i id="pdf" class="icons-vdos icon-pdf pl-2"></i>  
+                                <span class="sub-item pl-2 pt-1">defensor-del-pueblo-argentina-26/10/2007.pdf</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div *ngIf="sentences && sentences.length">
+                    <div class="row justify-content-center">
+                        <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+                    </div>
+                    <div class="row justify-content-center">
+                        <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>

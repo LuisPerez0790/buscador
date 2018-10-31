@@ -1,0 +1,26 @@
+
+{
+    "sentencesgwApp": {
+        "resource" : {
+            "home": {
+                "title": "Resources",
+                "createLabel": "Crear nuevo Resource",
+                "createOrEditLabel": "Crear o editar Resource",
+                "search": "Search for Resource"
+            },
+            "created": "Un nuevo Resource ha sido creado con el identificador {{ param }}",
+            "updated": "Un Resource ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Resource ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Resource {{ id }}?"
+            },
+            "detail": {
+                "title": "Resource"
+            },
+            "fileId": "File Id",
+            "title": "Title",
+            "path": "Path",
+            "sentence": "Sentence"
+        }
+    }
+}

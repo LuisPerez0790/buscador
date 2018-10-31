@@ -7,6 +7,15 @@ import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Ng2Webstorage } from 'ngx-webstorage';
 import { JhiEventManager } from 'ng-jhipster';
 
+import { AppAsideModule, AppBreadcrumbModule, AppHeaderModule, AppFooterModule, AppSidebarModule } from '@coreui/angular';
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+    suppressScrollX: true
+};
+
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
 import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
@@ -15,23 +24,37 @@ import { SentencesgwCoreModule } from 'app/core';
 import { SentencesgwAppRoutingModule } from './app-routing.module';
 import { SentencesgwHomeModule } from './home/home.module';
 import { SentencesgwEntityModule } from './entities/entity.module';
+import { SentencesgwSentenceModule } from 'app/views/search-system/search-system.module';
 import { StateStorageService } from 'app/core/auth/state-storage.service';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
-import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+import { JhiMainComponent,
+        SidebarComponent,
+        NavbarComponent,
+        FooterComponent,
+        PageRibbonComponent,
+        ActiveMenuDirective,
+        ErrorComponent } from './layouts';
 
 @NgModule({
     imports: [
         BrowserModule,
+        AppAsideModule,
+        AppBreadcrumbModule.forRoot(),
+        AppHeaderModule,
+        AppFooterModule,
+        AppSidebarModule,
         SentencesgwAppRoutingModule,
+        PerfectScrollbarModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
         SentencesgwSharedModule,
         SentencesgwCoreModule,
         SentencesgwHomeModule,
-        SentencesgwEntityModule
+        SentencesgwEntityModule,
+        SentencesgwSentenceModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+    declarations: [JhiMainComponent, SidebarComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,

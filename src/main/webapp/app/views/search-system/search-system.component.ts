@@ -104,7 +104,7 @@ import { SearchSystemService } from './search-system.service';
       }
 
       transition() {
-          this.router.navigate([''], {
+          this.router.navigate(['/search-system'], {
               queryParams: {
                   page: this.page,
                   size: this.itemsPerPage,
@@ -119,7 +119,7 @@ import { SearchSystemService } from './search-system.service';
           this.page = 0;
           this.textQuery = '';
           this.router.navigate([
-              '',
+              '/search-system',
               {
                   page: this.page,
                   sort: this.predicate + ',' + (this.reverse ? 'asc' : 'desc')
@@ -136,7 +136,7 @@ import { SearchSystemService } from './search-system.service';
           this.page = 0;
           this.buildSearch(query);
           this.router.navigate([
-              '',
+              '/search-system',
               {
                   search: this.currentSearch,
                   page: this.page,
@@ -237,7 +237,7 @@ import { SearchSystemService } from './search-system.service';
 
       private updateSearch() {
           this.router.navigate([
-              '',
+              '/search-system',
               {
                   search: this.currentSearch,
                   page: this.page,
@@ -282,7 +282,7 @@ import { SearchSystemService } from './search-system.service';
                   return t.length > 0;
                 }).join('|');
                 const regex = new RegExp(pattern, 'gi');
-                return text.replace(regex, match => `<span class="search-highlight">${match}</span>`);
+                return text.replace(regex, match => `<mark>${match}</mark>`);
               } else {
                 return text;
               }
